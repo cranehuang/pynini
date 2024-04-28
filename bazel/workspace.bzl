@@ -103,24 +103,24 @@ def pynini_repositories(name = ""):
     # OpenFst: See
     #    http://www.openfst.org/twiki/pub/FST/FstDownload/README
     # -------------------------------------------------------------------------
-    openfst_version = "1.8.2"
+    openfst_version = "1.8.3"
 
     http_archive(
         name = "org_openfst",
         urls = ["https://www.openfst.org/twiki/pub/FST/FstDownload/openfst-%s.tar.gz" % openfst_version],
-        sha256 = "de987bf3624721c5d5ba321af95751898e4f4bb41c8a36e2d64f0627656d8b42",
+        sha256 = "077714159d5cf3e38a80b6c6656d3ccc2c8b8b6c50bb41bb65c5fec10796bf53",
         strip_prefix = "openfst-%s" % openfst_version,
     )
 
     # -------------------------------------------------------------------------
     # Cython:
     # -------------------------------------------------------------------------
-    cython_version = "3.0.5"
+    cython_version = "3.0.7"
 
     http_archive(
         name = "org_cython",
         build_file = _clean_dep("//bazel:cython.BUILD.bazel"),
         urls = ["https://github.com/cython/cython/archive/%s.tar.gz" % cython_version],
-        sha256 = "28eafb657bf3f2f8d78eb7948ebb089be31e51ec76119d84925347c4dea68b59",
+        sha256 = "50e72ac8e32f5cca8242ad319df4cbd1f76545f2b66bc5d7b17ce45d5cbc415e",
         strip_prefix = "cython-%s" % cython_version,
     )
